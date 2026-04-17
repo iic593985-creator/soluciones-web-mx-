@@ -1,0 +1,220 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    background: #020617 !important;
+}
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* Fondo animado */
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, #020617, #0f172a, #1e293b);
+    background-size: 600% 600%;
+    animation: gradient 10s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% }
+    50% { background-position: 100% }
+    100% { background-position: 0% }
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    background: rgba(2,6,23,0.7);
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+/* Botón */
+.btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background: rgba(30,41,59,0.8);
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Secciones */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Animación */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 0.8s;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* WhatsApp */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+}
+.btn {
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #38bdf8;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #38bdf8, 0 0 40px #38bdf8;
+}
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    min-height: 80vh; /* 👈 IMPORTANTE */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cbd5f5;
+}.hero h2 {
+    text-shadow: 0 0 20px rgba(56,189,248,0.7);
+}
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(56,189,248,0.8);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #cbd5f5;
+}
+section {
+    background: transparent !important;
+}
+#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+
+    background: linear-gradient(-45deg, #020617, #0f172a, #1e293b, #38bdf8);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}#particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}

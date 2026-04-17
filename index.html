@@ -1,105 +1,246 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Jesús | Desarrollador</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones Web MX</title>
 
-    <!-- CONEXIÓN AL CSS (esto te faltaba) -->
-    <link rel="stylesheet" href="css/styles.css">
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #020617;
+  color: white;
+  text-align: center;
+}
+
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 1s;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HEADER */
+header {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  animation: fadeDown 1s ease;
+}
+
+@keyframes fadeDown {
+  from {opacity:0; transform: translateY(-30px);}
+  to {opacity:1; transform: translateY(0);}
+}
+
+h1 {
+  font-size: 45px;
+}
+
+/* BOTONES */
+button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #16a34a;
+}
+
+/* SECCIONES */
+section {
+  padding: 60px 20px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 20px rgba(34,197,94,0.5);
+}
+
+/* PRECIOS */
+.price {
+  font-size: 22px;
+  color: #22c55e;
+}
+
+/* TESTIMONIOS */
+.testimonial {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.testimonial:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  padding: 30px;
+  background: black;
+}
+
+/* BOTON WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 18px;
+  border-radius: 50%;
+  font-size: 22px;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {box-shadow: 0 0 0 0 rgba(37,211,102,0.7);}
+  70% {box-shadow: 0 0 0 20px rgba(37,211,102,0);}
+  100% {box-shadow: 0 0 0 0 rgba(37,211,102,0);}
+}
+
+/* RESPONSIVE */
+@media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    <h1>Jesús Dev</h1>
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+  <h1>🚀 Soluciones Web MX</h1>
+  <p>Creo páginas web modernas, rápidas y que venden para negocios en México</p>
+
+  <a href="https://wa.me/5216952395801?text=Hola%20quiero%20una%20pagina%20web" target="_blank">
+    <button>💬 Cotizar ahora</button>
+  </a>
 </header>
 
-<section class="hero reveal">
-    <h2>Creo páginas web que venden 🚀</h2>
-    <p>Diseño moderno, rápido y profesional</p>
+<section class="fade-in">
+  <h2>💼 Servicios</h2>
 
-    <a href="https://wa.me/5216952395801target="_blank">
-        <button class="btn">Contáctame</button>
-    </a>
-</section>
+  <div class="cards">
 
-<section id="servicios" class="servicios reveal">
-    <h2>Servicios</h2>
-
-    <div class="cards">
-        <div class="card reveal">
-            <h3>Páginas Web</h3>
-            <p>Diseño moderno y adaptable</p>
-        </div>
-
-        <div class="card reveal">
-            <h3>Apps</h3>
-            <p>Aplicaciones móviles</p>
-        </div>
-
-        <div class="card reveal">
-            <h3>Sistemas</h3>
-            <p>Soluciones personalizadas</p>
-        </div>
+    <div class="card">
+      <h3>🌐 Página básica</h3>
+      <p>Ideal para empezar tu negocio online</p>
+      <p class="price">$999 MXN</p>
     </div>
-</section>
 
-<section class="about reveal">
-    <h2>Sobre mí</h2>
-    <p>
-        Soy desarrollador enfocado en crear páginas web, apps y sistemas modernos.
-        Me gusta hacer soluciones rápidas y con buen diseño.
-    </p>
-</section>
-
-<section id="proyectos" class="proyectos reveal">
-    <h2>Proyectos</h2>
-
-    <div class="cards">
-        <div class="card reveal">
-            <h3>App de Mandados</h3>
-            <p>Tipo Rappi para entregas</p>
-        </div>
-
-        <div class="card reveal">
-            <h3>Marketplace</h3>
-            <p>Compra y venta de productos</p>
-        </div>
-
-        <div class="card reveal">
-            <h3>Sistema Escolar</h3>
-            <p>Control de alumnos</p>
-        </div>
+    <div class="card">
+      <h3>🚀 Página profesional</h3>
+      <p>Diseño moderno + optimización</p>
+      <p class="price">$1,999 MXN</p>
     </div>
+
+    <div class="card">
+      <h3>🛒 Tienda online</h3>
+      <p>Vende productos en internet</p>
+      <p class="price">$3,499 MXN</p>
+    </div>
+
+  </div>
 </section>
 
-<section id="contacto" class="contacto reveal">
-    <h2>Contacto</h2>
-    <p>¿Tienes un proyecto? Escríbeme</p>
+<section class="fade-in">
+  <h2>🔥 ¿Por qué elegirme?</h2>
 
-    <a href="https://wa.me/526952395801" target="_blank">
-        <button class="btn">WhatsApp</button>
-    </a>
+  <p>✔️ Entrega rápida</p>
+  <p>✔️ Precios accesibles</p>
+  <p>✔️ Diseño moderno</p>
+  <p>✔️ Soporte por WhatsApp</p>
+</section>
+
+<section class="fade-in">
+  <h2>⭐ Testimonios</h2>
+
+  <div class="cards">
+
+    <div class="testimonial">
+      <p>"Me hizo mi página en 2 días, quedó muy buena 🔥"</p>
+      <strong>- Cliente local</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>"Gracias a la web ahora tengo más clientes"</p>
+      <strong>- Negocio pequeño</strong>
+    </div>
+
+    <div class="testimonial">
+      <p>"Muy barato y profesional, recomendado"</p>
+      <strong>- Emprendedor</strong>
+    </div>
+
+  </div>
+</section>
+
+<section class="fade-in">
+  <h2>📞 Contacto</h2>
+  <p>Escríbeme directo por WhatsApp y cotiza sin compromiso</p>
+
+  <a href="https://wa.me/5216952395801?text=Hola%20quiero%20informacion" target="_blank">
+    <button>💬 Enviar mensaje</button>
+  </a>
 </section>
 
 <footer>
-    <p>© 2026 Jesús Dev</p>
+  <p>© 2026 Soluciones Web MX | Hecho con 💻</p>
 </footer>
 
-<!-- BOTÓN FLOTANTE -->
-<a href="https://wa.me/5216952395801" class="whatsapp" target="_blank">
-    💬
+<a href="https://wa.me/5216952395801?text=Hola%20quiero%20una%20pagina" class="whatsapp">
+💬
 </a>
-<canvas id="particles"></canvas
 
-<!-- CONEXIÓN AL JS (esto también faltaba) -->
-<script src="js/script.js"></script>
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+function showOnScroll() {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if(top < trigger){
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+</script>
 
 </body>
 </html>
